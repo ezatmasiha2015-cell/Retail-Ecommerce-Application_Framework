@@ -6,6 +6,8 @@ public class DemoPage {
 		int b= 30;
 		System.out.println(b);
 		System.out.println("This is Masiha's code");
+		System.out.println(" The confilect removed");
+
 	}
 
 }
