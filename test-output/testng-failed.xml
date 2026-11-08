@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="tests" name="Failed suite [DMVTEK-Retail Application Test Regression Suite]" verbose="2">
-  <test thread-count="3" parallel="tests" name="Login Page Test(failed)" verbose="2">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.retail.tests.LoginPageTest">
+      <class name="com.qa.retail.tests.ProductResultsPageTest">
         <methods>
           <include name="tearDown"/>
           <include name="attachScreenshot"/>
           <include name="setup"/>
-          <include name="loginPageTest"/>
+          <include name="productInoTest"/>
+          <include name="productInfosetup"/>
+          <include name="productImagesTest"/>
         </methods>
-      </class> <!-- com.qa.retail.tests.LoginPageTest -->
+      </class> <!-- com.qa.retail.tests.ProductResultsPageTest -->
     </classes>
-  </test> <!-- Login Page Test(failed) -->
-</suite> <!-- Failed suite [DMVTEK-Retail Application Test Regression Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
