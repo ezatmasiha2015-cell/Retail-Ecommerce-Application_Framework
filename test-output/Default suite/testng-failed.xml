@@ -3,16 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.retail.tests.ProductResultsPageTest">
+      <class name="com.qa.retail.tests.AccountsPageTest">
         <methods>
+          <include name="accsetup"/>
+          <include name="isSearchFieldExistTest"/>
           <include name="tearDown"/>
           <include name="attachScreenshot"/>
+          <include name="accPageTitleTest"/>
           <include name="setup"/>
-          <include name="productInoTest"/>
-          <include name="productInfosetup"/>
-          <include name="productImagesTest"/>
+          <include name="isLogoutLinkTest"/>
+          <include name="accPageHeadersTest"/>
+          <include name="accPageURLTest"/>
+          <include name="searchTest"/>
+          <include name="accPageHeadersCountTest"/>
         </methods>
-      </class> <!-- com.qa.retail.tests.ProductResultsPageTest -->
+      </class> <!-- com.qa.retail.tests.AccountsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

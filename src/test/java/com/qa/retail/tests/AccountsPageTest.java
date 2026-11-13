@@ -6,12 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.qa.retail.base.baseTest;
+import com.qa.retail.base.BaseTest;
+import com.qa.retail.constants.AppConstants;
+import com.qa.retail.pages.AccountsPage;
 
-import co.qa.retail.constants.AppConstants;
-import co.qa.retail.pages.AccountsPage;
-
-public class AccountsPageTest extends baseTest{
+public class AccountsPageTest extends BaseTest{
 	
 	
 	@BeforeClass

@@ -7,9 +7,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.qa.retail.base.baseTest;
+import com.qa.retail.base.BaseTest;
 
-public class RegisterPageTest extends baseTest{
+public class RegisterPageTest extends BaseTest{
 
 @BeforeClass
 public void regStup() {

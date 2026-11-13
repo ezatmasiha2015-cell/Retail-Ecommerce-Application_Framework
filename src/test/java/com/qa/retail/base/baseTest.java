@@ -15,15 +15,16 @@ import org.testng.asserts.SoftAssert;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.aventstack.chaintest.service.ChainPluginService;
-
-import co.qa.retail.factory.DriverFactory;
-import co.qa.retail.pages.AccountsPage;
-import co.qa.retail.pages.LoginPage;
-import co.qa.retail.pages.RegisterPage;
-import co.qa.retail.pages.productInfoPage;
-import co.qa.retail.pages.searchResultPage;
-@Listeners(ChainTestListener.class)
-public class baseTest {
+import com.qa.retail.factory.DriverFactory;
+import com.qa.retail.listeners.TestAllureListener;
+import com.qa.retail.pages.AccountsPage;
+import com.qa.retail.pages.LoginPage;
+import com.qa.retail.pages.RegisterPage;
+import com.qa.retail.pages.productInfoPage;
+import com.qa.retail.pages.searchResultPage;
+//@Listeners(ChainTestListener.class)
+@Listeners(TestAllureListener.class)
+public class BaseTest {
 
 	protected WebDriver driver;
 
@@ -49,7 +50,8 @@ public class baseTest {
 		df = new DriverFactory();
 		prop = df.initProp();
 //	driver=df.initDriver("chrome");
-		driver = df.initDriver(prop);
+		 // If a browser parameter is provided from the TestNG XML, it will override the browser value from the config.properties file
+//		driver = df.initDriver(prop);
 		// check to give the reference to xml file
 		if (browserName !=null) {
 			prop.setProperty("browser", browserName);
@@ -62,7 +64,7 @@ public class baseTest {
 	@AfterMethod
 	public void attachScreenshot(ITestResult result) {
 	if(!result.isSuccess()) {
-		//takeScreenshot();
+		takeScreenshot();
 		ChainTestListener.embed(takeScreenshot(), "image/png");
 	}
 	}
