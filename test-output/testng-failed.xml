@@ -11,10 +11,14 @@
     <classes>
       <class name="com.qa.retail.tests.LoginPageTest">
         <methods>
+          <include name="doLoginTest"/>
           <include name="loginPageTest"/>
+          <include name="loginPageURLTest"/>
+          <include name="isLogoDisplayedTest"/>
           <include name="tearDown"/>
           <include name="setup"/>
           <include name="attachScreenshot"/>
+          <include name="isForgotternPWExistTest"/>
         </methods>
       </class> <!-- com.qa.retail.tests.LoginPageTest -->
     </classes>
