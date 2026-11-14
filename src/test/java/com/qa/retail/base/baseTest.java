@@ -24,7 +24,7 @@ import com.qa.retail.pages.productInfoPage;
 import com.qa.retail.pages.searchResultPage;
 //@Listeners(ChainTestListener.class)
 @Listeners(TestAllureListener.class)
-public class BaseTest {
+public class baseTest {
 
 	protected WebDriver driver;
 

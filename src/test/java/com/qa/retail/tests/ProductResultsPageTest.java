@@ -7,9 +7,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.qa.retail.base.BaseTest;
+import com.qa.retail.base.baseTest;
 
-public class ProductResultsPageTest extends BaseTest {
+public class ProductResultsPageTest extends baseTest {
 	@BeforeClass
 	public void productInfosetup() {
 		accPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));

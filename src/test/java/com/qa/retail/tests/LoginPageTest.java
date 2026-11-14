@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.chaintest.plugins.ChainTestListener;
-import com.qa.retail.base.BaseTest;
+import com.qa.retail.base.baseTest;
 import com.qa.retail.constants.AppConstants;
 
 import io.qameta.allure.Description;
@@ -17,7 +17,7 @@ import io.qameta.allure.Story;
 @Story("User Story 101: Registration Flow")
 @Story("User Story 102: Front End UI Style")
 @Feature("F12: Login Page main Feature")
-public class LoginPageTest extends BaseTest{
+public class LoginPageTest extends baseTest{
 	
 	
 	@Description("Login Page Title Test")
