@@ -40,12 +40,14 @@ public class baseTest {
 	@BeforeTest
 
 	public void setup(String browserName) {
+		if(ChainPluginService.getInstance()!=null) {
 		ChainPluginService.getInstance().addSystemInfo("Builds", "1.0");
 		ChainPluginService.getInstance().addSystemInfo("Owner Name", "Masiha");
 		ChainPluginService.getInstance().addSystemInfo("Sr. Tester", "Micheal");
 		ChainPluginService.getInstance().addSystemInfo("Manager", "David");
 		ChainPluginService.getInstance().addSystemInfo("Team Lead", "Jessica");
 		ChainPluginService.getInstance().addSystemInfo("HR", "Fatima");
+		}
 		
 		df = new DriverFactory();
 		prop = df.initProp();
