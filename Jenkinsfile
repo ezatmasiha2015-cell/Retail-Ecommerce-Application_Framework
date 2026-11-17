@@ -78,7 +78,7 @@ pipeline
         stage('Sanity Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-                    git 'https://github.com/Sabawoon-stech/Retail-Ecommerce-Application_Framework.git'
+                    git 'https://github.com/ezatmasiha2015-cell/Retail-Ecommerce-Application_Framework.git'
                     bat "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunners/testng_sanity.xml"
                     
                 }
