@@ -81,22 +81,16 @@
 					<target>21</target>
 				</configuration>
 			</plugin>
-
-
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<!--<version>3.6.0</version>-->
-				<version>3.5.4</version>
-
+				<version>3.2.5</version>
 				<configuration>
-					<forkCount>1</forkCount>
+					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-					<suiteXmlFile>
-						
-						src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
-						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<argLine>
 						-javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.26/aspectjweaver-1.9.26.jar
@@ -110,6 +104,35 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+
+
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-surefire-plugin</artifactId>-->
+<!--				<version>3.6.0</version>-->
+<!--				<version>3.5.4</version>-->
+
+<!--				<configuration>-->
+<!--					<forkCount>1</forkCount>-->
+<!--					<reuseForks>true</reuseForks>-->
+<!--					<suiteXmlFiles>-->
+<!--					<suiteXmlFile>-->
+						
+<!--						src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>-->
+<!--						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
+<!--					</suiteXmlFiles>-->
+<!--					<argLine>-->
+<!--						-javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/1.9.26/aspectjweaver-1.9.26.jar-->
+<!--					</argLine>-->
+<!--				</configuration>-->
+<!--				<dependencies>-->
+<!--					<dependency>-->
+<!--						<groupId>org.aspectj</groupId>-->
+<!--						<artifactId>aspectjweaver</artifactId>-->
+<!--						<version>1.9.26</version>-->
+<!--					</dependency>-->
+<!--				</dependencies>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 </project>
