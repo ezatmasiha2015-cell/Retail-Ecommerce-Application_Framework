@@ -10,6 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
@@ -39,10 +40,11 @@ public class baseTest {
 	@Parameters({"browser"})
 	@BeforeTest
 
-	public void setup(String browserName) {
+	public void setup(@Optional("chrome")String browserName) {
 		if(ChainPluginService.getInstance()!=null) {
 		ChainPluginService.getInstance().addSystemInfo("Builds", "1.0");
 		ChainPluginService.getInstance().addSystemInfo("Owner Name", "Masiha");
+		ChainPluginService.getInstance().getInstance().addSystemInfo("Browser",browserName);
 		ChainPluginService.getInstance().addSystemInfo("Sr. Tester", "Micheal");
 		ChainPluginService.getInstance().addSystemInfo("Manager", "David");
 		ChainPluginService.getInstance().addSystemInfo("Team Lead", "Jessica");
